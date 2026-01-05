@@ -1,0 +1,4 @@
+-- SQL for analytics tables
+-- CREATE TABLE dim_customers (...);
+-- CREATE TABLE dim_products (...);
+-- CREATE TABLE fact_transactions (...);

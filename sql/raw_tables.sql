@@ -1,0 +1,4 @@
+-- SQL for raw tables
+-- CREATE TABLE raw_users (...);
+-- CREATE TABLE raw_products (...);
+-- CREATE TABLE raw_carts (...);

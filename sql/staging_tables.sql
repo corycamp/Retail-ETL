@@ -1,0 +1,4 @@
+-- SQL for staging tables
+-- CREATE TABLE staging_users (...);
+-- CREATE TABLE staging_products (...);
+-- CREATE TABLE staging_transactions (...);
