@@ -14,9 +14,9 @@ def raw_data_extraction():
     timestamp = datetime.now().isoformat() + "Z"
     try:
         [productData, cartData, userData] = [products.fetch_products(), carts.fetch_carts(), users.fetch_users()]
-        print(f"Extracted {len(productData['products'])} products.")
-        print(f"Extracted {len(cartData['carts'])} carts.")
-        print(f"Extracted {len(userData['users'])} users.")
+        print(f"Extracted {len(productData)} products.")
+        print(f"Extracted {len(cartData)} carts.")
+        print(f"Extracted {len(userData)} users.")
     except Exception as e:
         print(f"Error during data extraction: {e}")
         return
@@ -59,8 +59,12 @@ def raw_data_extraction():
         
 def main():
     print("Starting Retail ETL pipeline...")
-    raw_data_extraction()
-    print("Retail ETL pipeline completed.")
+    try:
+        raw_data_extraction()
+        print("Retail ETL pipeline completed.")
+    except Exception as e:
+        print(f"Error in ETL pipeline: {e}")
+    
 
 if __name__ == "__main__":
     main()
